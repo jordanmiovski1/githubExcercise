@@ -1,0 +1,42 @@
+<div>
+  <h3>Filter reviews</h3>
+</div>
+<form [formGroup]="form">
+  <div>
+    <p>Order by rating:</p>
+    <select formControlName="orderHighestRatingFirst">
+      <option [ngValue]="true">Highest First</option>
+      <option [ngValue]="false">Lowest First</option>
+    </select>
+  </div>
+  <div>
+    <p>Minimum rating:</p>
+    <select formControlName="minRating">
+      <option [ngValue]="5">5</option>
+      <option [ngValue]="4">4</option>
+      <option [ngValue]="3">3</option>
+      <option [ngValue]="2">2</option>
+      <option [ngValue]="1">1</option>
+    </select>
+  </div>
+  <div>
+    <p>Order by date:</p>
+
+    <select formControlName="orderByOldestDateFirst">
+      <option [ngValue]="false">Newest First</option>
+      <option [ngValue]="true">Oldest First</option>
+    </select>
+  </div>
+
+  <div>
+    <p>Prioritize by text:</p>
+    <select formControlName="prioritizeByText">
+      <option [ngValue]="true">Yes</option>
+      <option [ngValue]="false">No</option>
+    </select>
+  </div>
+  <br />
+  <div>
+    <button (click)="onClicked()">Filter</button>
+  </div>
+</form>

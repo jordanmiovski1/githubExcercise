@@ -1,0 +1,18 @@
+<table *ngIf="reviewsToDisplay.length > 0">
+  <thead>
+    <tr>
+      <th>Reviewer Name</th>
+      <th>Rating</th>
+      <th>Text</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let review of reviewsToDisplay">
+      <th>{{ review.reviewerName }}</th>
+      <th>{{ review.rating }}</th>
+      <th>{{ review.reviewText }}</th>
+      <th>{{ review.reviewCreatedOnDate | date: "dd.MM.yyyy hh:mm" }}</th>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,6 @@
+<div>
+  <app-reviews-filter
+    (onFiltersChanged)="onFiltersChanged($event)"
+  ></app-reviews-filter>
+  <app-reviewlist [reviews]="reviewsToDisplay"></app-reviewlist>
+</div>
